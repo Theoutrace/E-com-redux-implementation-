@@ -17,7 +17,7 @@ const SingleItem = (props) => {
       newArr[idx] = {
         ...cartItems[idx],
         qty: cartItems[idx].qty + 1,
-        totalPrice: cartItems[idx].price + cartItems[idx].price,
+        totalPrice: cartItems[idx].price +cartItems[idx].totalPrice,
       };
 
       dispatch(cartActions.addItem([...newArr]));
