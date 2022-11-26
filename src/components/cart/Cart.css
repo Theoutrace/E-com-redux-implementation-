@@ -1,0 +1,179 @@
+.cart-cntnr{
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    display: flex;
+}
+
+.cart-box-cntnr{
+    background-color: rgb(232, 240, 237);
+    width: 80%;
+    flex-direction: column;
+    border: 3px dashed grey;
+    height: 350px;
+    font-size: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.cart-box-cntnr h2{
+    margin: 3px;
+    text-transform: uppercase;
+    color: grey;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    border-bottom:  1px dashed rgba(128, 128, 128, 0.308);
+    padding-bottom: 5px;
+}
+
+.cart-box-cntnr h3{
+    font-weight: 400;
+    color: rgba(128, 128, 128, 0.53);
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+.all-cart-itm-cntnr-outer-out{
+    width: 100%;
+    overflow-y: hidden;
+    display: flex;
+}
+
+.all-cart-itm-cntnr-outer{
+    /* background-color: rgba(137, 43, 226, 0.291); */
+    width: 70%;
+    overflow-y: scroll;
+}
+
+.all-cart-itm-cntnr-outer::-webkit-scrollbar{
+    display: none;
+}
+
+
+.single-itm-cart-cntnr{
+    background-color: rgba(153, 157, 157, 0.665);
+    border: 1px dashed grey;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+.single-itm-cart-cntnr p{
+    margin-right: 3px;
+
+}
+
+
+.single-itm-cart-cntnr button{
+    width: 80px;
+    height: 30px;
+    border: 0px;
+    border-radius: 5px;
+}
+
+
+.billing-area{
+    /* background-color: aqua; */
+    width: 30%;
+    height: 100%;
+    justify-content: end;
+    display: flex;
+    flex-direction: column;
+}
+
+.billing-area button{
+    background-color: rgba(62, 63, 63, 0.786);
+    width: 90%;
+    margin: 5px 20px 5px 20px;
+    color: white;
+    padding: 10px 25px 10px 25px;
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0);
+    font-size: 20px;
+}
+
+.billing-area button:hover{
+    border: 1px solid rgba(128, 128, 128, 0);
+    background-color: rgb(25, 120, 63);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.billing-cntnr-box{
+    height: 250px;
+    margin: 20px;
+    border: 1px dashed rgba(128, 128, 128, 0.263);
+    border-radius: 5px;
+}
+
+.billing-cntnr-box-div-content{
+    margin: 5px 10px 5px 10px;
+    background-color: rgba(255, 255, 255, 0.294);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px 10px 5px 10px;
+    border-bottom: 1px dashed rgba(128, 128, 128, 0.276);
+}
+
+.billing-cntnr-box-div-content-title-txt{
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+    color: grey;
+}
+
+.billing-cntnr-box-div-content-title-value{
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(129, 43, 210);
+}
+
+.billing-cntnr-box-div-content:first-child{
+    margin-top: 20px;
+}
+
+.minus-plus-btn-cntnr{
+    width: 60px;
+    display: flex;
+    border-radius: 10px;
+}
+
+
+.minus-plus-btn-cntnr-button:first-child{
+    background-color: rgb(112, 115, 115);
+    color: aliceblue;
+    font-size: 20px;
+    border-radius: 10px 0px 0px 10px;
+    border-right: 1px solid rgba(255, 255, 255, 0.429);
+}
+
+.minus-plus-btn-cntnr-button:first-child:hover{
+    background-color: aliceblue;
+    cursor: pointer;
+    color: grey;
+}
+
+.minus-plus-btn-cntnr-button:last-child{
+    background-color: rgb(112, 115, 115);
+    color: aliceblue;
+    font-size: 20px;
+    border-radius: 0px 10px 10px 0px;
+    border-left: 1px solid rgba(255, 255, 255, 0.429);
+}
+
+.minus-plus-btn-cntnr-button:last-child:hover{
+    background-color: aliceblue;
+    cursor: pointer;
+    color: grey;
+}
