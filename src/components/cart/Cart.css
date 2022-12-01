@@ -2,12 +2,12 @@
   justify-content: right;
   align-items: center;
   display: flex;
-  position: fixed;
   right: 0px;
-  top: 0px;
   z-index: 5;
   margin-bottom: 10px;
-  margin: 5px;
+  margin: 5px; 
+  position: absolute;
+  top: 0px;
 }
 
 .cart-box-cntnr {
@@ -21,11 +21,12 @@
   display: flex;
   align-items: center;
   position: relative;
+  /* top: 5px; */
 }
 
 .cart-box-cntnr-none {
   background-color: rgb(238, 245, 245);
-  width: 400px;
+  width: 200px;
   flex-direction: column;
   border: 1px dashed rgba(128, 128, 128, 0.301);
   height: 47px;

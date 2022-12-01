@@ -8,6 +8,7 @@ import cart from "./images/emptycart.png";
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
   const cartTotal = useSelector((state) => state.cart.totalCost);
+  const favItems = useSelector((state) => state.profile.favorite);
 
   const [showCart, setShowCart] = useState(false);
 
@@ -20,7 +21,12 @@ const Cart = () => {
       <div className={showCart ? "cart-box-cntnr" : "cart-box-cntnr-none"}>
         <button className="cart-toggle-btn" onClick={toggleCartHandler}>
           {showCart ? (
-            <img className="invert-icon-cart-close" src={upDown} alt="" width="30" />
+            <img
+              className="invert-icon-cart-close"
+              src={upDown}
+              alt=""
+              width="30"
+            />
           ) : (
             <img
               className="invert-icon-cart-open"
@@ -30,9 +36,7 @@ const Cart = () => {
             />
           )}
         </button>
-        <h2>
-          Cart
-        </h2>
+        <h2>Cart</h2>
         <div className="all-cart-itm-cntnr-outer-out">
           {cartItems.length !== 0 && (
             <>
@@ -64,10 +68,10 @@ const Cart = () => {
                   </div>
                   <div className="billing-cntnr-box-div-content">
                     <div className="billing-cntnr-box-div-content-title-txt">
-                      Net Total 
+                      Net Total
                     </div>
                     <div className="billing-cntnr-box-div-content-title-value">
-                    ₹ {(cartTotal + cartTotal * (10 / 100)).toFixed(2)}
+                      ₹ {(cartTotal + cartTotal * (10 / 100)).toFixed(2)}
                     </div>
                   </div>
                 </div>
@@ -81,7 +85,12 @@ const Cart = () => {
                 <img src={cart} alt="" width="60" />
               </div>
               <div>
-                <h3>Add something +</h3>
+                {favItems.length ? (
+                  <p>
+                    You have {favItems.length} favorite items Lets grab{" "}
+                    {favItems.length === 1 ? "it!" : "some!"}
+                  </p>
+                ):<h3>Add something +</h3>}
               </div>
             </div>
           )}

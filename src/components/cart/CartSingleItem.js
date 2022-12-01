@@ -75,11 +75,11 @@ const CartSingleItem = (props) => {
         </div>
       </div>
       <div className="minus-plus-btn-cntnr">
-        <button onClick={subtractQtyHandler}>
-          <img src={min} alt="" width="25" />
-        </button>
-        <button onClick={addQtyHandler} className="minus-plus-btn-cntnr-button">
+        <button onClick={addQtyHandler}>
           <img src={plus} alt="" width="25" />
+        </button>
+        <button onClick={subtractQtyHandler} className="minus-plus-btn-cntnr-button">
+          <img src={min} alt="" width="25" />
         </button>
       </div>
 
