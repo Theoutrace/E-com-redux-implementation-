@@ -1,0 +1,58 @@
+.login-form-cntnr-login-cmpn {
+  /* background-color: blueviolet; */
+  width: 300px;
+  margin-top: 100px;
+}
+
+.login-form-form-signup-ss{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  padding: 0px;
+  padding: 20px 20px 20px 20px;
+  border-radius: 5px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.register-text{
+    text-align: center;
+    margin-bottom: 40px;
+    color: grey;
+}
+
+.email-input-box{
+    /* background-color: aliceblue; */
+    border: 1px solid rgba(128, 128, 128, 0.349);
+    height: 30px;
+    margin: 2px;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+
+.signup-login-register-btn-form{
+    padding: 10px 1px 1px 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-login-register-btn-form button{
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    border: 0px;
+    font-size: 16px;
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+}
+
+.signup-login-register-btn-form button:hover{
+  background-color: rgb(125, 20, 223);
+}
+
+.toggle-frm-login-signup-tgl{
+  cursor: pointer;
+  margin-left: 5px;
+  color: blueviolet;
+}

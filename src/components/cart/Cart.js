@@ -36,7 +36,7 @@ const Cart = () => {
             />
           )}
         </button>
-        <h2>Cart</h2>
+        <h2>Cart {cartItems.length? <span className="cart-status-on-cart-btn">{cartItems.length}</span>:''}</h2>
         <div className="all-cart-itm-cntnr-outer-out">
           {cartItems.length !== 0 && (
             <>
@@ -87,7 +87,7 @@ const Cart = () => {
               <div>
                 {favItems.length ? (
                   <p>
-                    You have {favItems.length} favorite items Lets grab{" "}
+                    You have {favItems.length} favorite {favItems.length>1? 'items': 'item'} Lets grab{" "}
                     {favItems.length === 1 ? "it!" : "some!"}
                   </p>
                 ):<h3>Add something +</h3>}
