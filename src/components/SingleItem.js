@@ -17,14 +17,33 @@ const SingleItem = (props) => {
       newArr[idx] = {
         ...cartItems[idx],
         qty: cartItems[idx].qty + 1,
-        totalPrice: cartItems[idx].price +cartItems[idx].totalPrice,
+        totalPrice: cartItems[idx].price + cartItems[idx].totalPrice,
       };
 
-      dispatch(cartActions.addItem([...newArr]));
+      let totalCost = 0
+      newArr.forEach(element=>{
+        totalCost = totalCost + element.totalPrice
+      })
+
+      dispatch(cartActions.addItem({ arr: [...newArr], cartTotal: totalCost }));
     } else {
       // if item is not already existing
+
       const item = { ...props.item, qty: 1, totalPrice: props.item.price };
-      dispatch(cartActions.addItem([...cartItems, item]));
+      let totalCost = 0;
+
+      cartItems.forEach((element) => {
+        totalCost = totalCost + element.totalPrice;
+      });
+
+      // console.log(totalCost);
+
+      dispatch(
+        cartActions.addItem({
+          arr: [...cartItems, item],
+          cartTotal: totalCost + item.price,
+        })
+      );
     }
   };
 
@@ -39,6 +58,7 @@ const SingleItem = (props) => {
         setShowAdd(() => false);
       }}
     >
+    <img className="singleItem-cntnr-product-image" src={props.item.src} alt='' width='100%' height='300'/>
       <div>{props.item.name}</div>
       <div>Price: {props.item.price}</div>
       {showAdd && <p onClick={addItemToCartHandler}>Add to cart</p>}
